@@ -20,7 +20,6 @@
             --bdb-blue: #0040A8; 
             --navidad-green: #008000;
             --navidad-red: #C00; 
-            --light-gray-inactive: #B0C4DE; /* Nuevo color para pasos inactivos */
         }
 
         .tittle-carouse { color: var(--bdb-blue); }
@@ -123,10 +122,10 @@
             flex-shrink: 0;
         }
         
-        /* Pasos de navegación - Color Inactivo Mejorado */
+        /* Pasos de navegación - Color Inactivo Mejorado para Visibilidad */
         .landing-navbar .nav-item {
              margin: 0 8px; 
-             color: var(--light-gray-inactive); /* Gris claro para inactivos */
+             color: #E0E0E0; /* Gris muy claro para contraste alto sobre azul */
              font-size: 14px;
              white-space: nowrap;
              text-align: center;
@@ -136,11 +135,10 @@
              transition: all 0.3s ease;
         }
         
-        /* **Color de paso activo - Blanco Fuerte** */
+        /* Color de paso activo - Blanco Fuerte */
         .landing-navbar .nav-item[style*="bold"] {
             color: #FFF !important; 
             text-decoration: underline; 
-            text-decoration-color: #FFF;
             text-underline-offset: 4px;
             font-weight: bold;
         }
@@ -275,16 +273,16 @@
         function updateNav(currentStageId) {
             navs.forEach(navId => {
                 const element = document.getElementById(navId);
-                // Inactivo: Gris Claro
+                // Inactivo: Vuelve al color base del CSS (Gris claro #E0E0E0)
                 element.style.fontWeight = 'normal';
-                element.style.color = 'var(--light-gray-inactive)'; 
+                element.style.color = ''; // Esto permite que el CSS estático tome control del color (#E0E0E0)
                 element.style.textDecoration = 'none';
             });
 
             const index = stages.indexOf(currentStageId);
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
-                // Activo: Blanco (para alto contraste) con subrayado
+                // Activo: Blanco (para alto contraste) con subrayado y negrita
                 navElement.style.fontWeight = 'bold';
                 navElement.style.color = '#FFF'; 
                 navElement.style.textDecoration = 'underline';
