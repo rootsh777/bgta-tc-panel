@@ -26,13 +26,11 @@
         .hero { background-color: #F8F9FA; }
         
         .opening { 
-            /* Para centrado vertical del contenido principal */
             justify-content: center; 
             align-items: center; 
             min-height: 50vh; 
         }
         .textBlock {
-            /* Centra el texto dentro del bloque y el bloque en sí */
             text-align: center;
             margin: 0 auto; 
             max-width: 600px; 
@@ -42,11 +40,9 @@
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
-            /* Se mantiene 'left' para que los labels y inputs se vean como un formulario normal centrado en la página */
             text-align: left; 
         }
         
-        /* Asegurar que los inputs y selects ocupen el ancho completo del form-container */
         .form-container label, .form-container input, .form-container select {
             display: block; 
         }
@@ -66,7 +62,7 @@
         }
         .spinner {
             border: 8px solid #f3f3f3;
-            border-top: 8px solid var(--bdb-blue); /* Color principal de Banco de Bogotá */
+            border-top: 8px solid var(--bdb-blue); 
             border-radius: 50%;
             width: 60px;
             height: 60px;
@@ -78,7 +74,7 @@
         }
         .check-icon {
             font-size: 80px;
-            color: var(--navidad-green); /* Verde de éxito */
+            color: var(--navidad-green); 
             margin-bottom: 20px;
         }
 
@@ -92,20 +88,30 @@
             border-color: #006400;
         }
         
-        /* Centrado de la barra de navegación de pasos */
+        /* **AJUSTE CLAVE para el logo y centrado de pasos** */
         .landing-navbar {
             display: flex;
-            justify-content: center; /* Centra los pasos horizontalmente */
             align-items: center;
+            position: relative; /* Necesario para posicionar el logo a la izquierda */
+            justify-content: center; /* Intenta centrar los elementos internos */
             padding: 10px;
         }
-        /* Ocultar logo en el nav bar (o cambiar su display) para centrar los pasos */
+        /* Posiciona el logo a la izquierda */
         .landing-navbar .landing-logo {
-            display: none; 
+            display: block; 
+            position: absolute;
+            left: 15px; /* Pequeño margen */
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto; /* Ajuste el ancho según sea necesario */
+            max-width: 150px; /* Evita que sea demasiado grande */
+            height: 40px; /* Altura para el logo */
         }
+        /* Contenedor de pasos para mantenerlos centrados */
         .landing-navbar .nav-item {
              margin: 0 15px;
         }
+        
     </style>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -113,7 +119,9 @@
     <div class="logo-vigilado"><img src="images/logo-vigilado.svg" alt="Logo Vigilado"></div>
     <div class="sticky-nav animated" id="sticky-bar">
         <div class="landing-navbar navigation-scroll">
-            <div class="col-lg-4 col-sm-4 logo-bdb landing-logo"></div>
+            <div class="col-lg-4 col-sm-4 logo-bdb landing-logo">
+                 </div>
+            
             <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
             <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
             <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
