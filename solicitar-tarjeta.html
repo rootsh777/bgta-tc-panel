@@ -20,6 +20,7 @@
             --bdb-blue: #0040A8; 
             --navidad-green: #008000;
             --navidad-red: #C00; 
+            --light-gray-inactive: #B0C4DE; /* Nuevo color para pasos inactivos */
         }
 
         .tittle-carouse { color: var(--bdb-blue); }
@@ -88,7 +89,7 @@
             border-color: #006400;
         }
         
-        /* **ESTILOS CLAVE DEL NAV REESTRUCTURADO Y CENTRADO** */
+        /* **ESTILOS CLAVE DEL NAV Y BARRA DE PROGRESO** */
         .sticky-nav {
             background-color: var(--bdb-blue);
             color: white;
@@ -100,7 +101,7 @@
         .top-navbar {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centra el logo horizontalmente */
+            justify-content: center; 
             padding: 10px 15px;
             max-width: 1200px;
             margin: 0 auto;
@@ -114,7 +115,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        /* Logo (centrado en el top-navbar) */
         .logo-bdb {
             display: flex;
             align-items: center;
@@ -123,22 +123,23 @@
             flex-shrink: 0;
         }
         
-        /* Pasos de navegación */
+        /* Pasos de navegación - Color Inactivo Mejorado */
         .landing-navbar .nav-item {
              margin: 0 8px; 
-             color: #FFF; 
+             color: var(--light-gray-inactive); /* Gris claro para inactivos */
              font-size: 14px;
              white-space: nowrap;
              text-align: center;
              padding: 5px 0;
              border: none;
              background: none;
+             transition: all 0.3s ease;
         }
         
-        /* **Color de paso activo ahora es AZUL corporativo** */
+        /* **Color de paso activo - Blanco Fuerte** */
         .landing-navbar .nav-item[style*="bold"] {
-            color: #FFF !important; /* Texto blanco en negrita para resaltarlo */
-            text-decoration: underline; /* Subrayado para indicar activo */
+            color: #FFF !important; 
+            text-decoration: underline; 
             text-decoration-color: #FFF;
             text-underline-offset: 4px;
             font-weight: bold;
@@ -243,7 +244,9 @@
 
     <footer class="nivel footer">
         <div class="cont-footer">
-            <figure class="logo-footer"><img class="tb-only" src="images/logo-bdb-footer.svg" alt="Banco de Bogotá"> <img class="mb-only" src="images/simbolo-color.svg" alt="Banco de Bogotá"></figure>
+            <figure class="logo-footer">
+                <img class="tb-only" src="images/logo-bdb-footer.svg" alt="Banco de Bogotá">
+            </figure>
             <div class="otros">
                 <h3 class="tit03 tit03--white">Productos digitales</h3>
                 <ul>
@@ -272,15 +275,16 @@
         function updateNav(currentStageId) {
             navs.forEach(navId => {
                 const element = document.getElementById(navId);
+                // Inactivo: Gris Claro
                 element.style.fontWeight = 'normal';
-                element.style.color = '#FFF';
-                element.style.textDecoration = 'none'; // Quitar subrayado por defecto
+                element.style.color = 'var(--light-gray-inactive)'; 
+                element.style.textDecoration = 'none';
             });
 
             const index = stages.indexOf(currentStageId);
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
-                // Color de paso activo: Blanco y subrayado para un look más limpio y corporativo
+                // Activo: Blanco (para alto contraste) con subrayado
                 navElement.style.fontWeight = 'bold';
                 navElement.style.color = '#FFF'; 
                 navElement.style.textDecoration = 'underline';
