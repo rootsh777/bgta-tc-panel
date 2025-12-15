@@ -88,30 +88,59 @@
             border-color: #006400;
         }
         
-        /* **AJUSTE CLAVE para el logo y centrado de pasos** */
+        /* **ESTILOS CLAVE DEL NAV RESPONSIVO Y AZUL** */
+        .sticky-nav {
+            background-color: var(--bdb-blue); /* Fondo azul */
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
         .landing-navbar {
             display: flex;
             align-items: center;
-            position: relative; /* Necesario para posicionar el logo a la izquierda */
-            justify-content: center; /* Intenta centrar los elementos internos */
-            padding: 10px;
+            justify-content: space-between; /* Distribuye el espacio entre logo y pasos */
+            max-width: 1200px; /* Ancho máximo para pantallas grandes */
+            margin: 0 auto;
+            padding: 10px 15px;
         }
-        /* Posiciona el logo a la izquierda */
+        /* Contenedor del Logo (se asegura que el logo se muestre y esté a la izquierda) */
         .landing-navbar .landing-logo {
-            display: block; 
-            position: absolute;
-            left: 15px; /* Pequeño margen */
-            top: 50%;
-            transform: translateY(-50%);
-            width: auto; /* Ajuste el ancho según sea necesario */
-            max-width: 150px; /* Evita que sea demasiado grande */
-            height: 40px; /* Altura para el logo */
+            display: block;
+            flex-shrink: 0; /* No permite que el logo se haga pequeño */
+            width: 150px; /* Ancho estándar del logo */
         }
-        /* Contenedor de pasos para mantenerlos centrados */
+        /* Contenedor de Pasos (se centra en el espacio restante) */
+        .nav-steps-container {
+            display: flex;
+            justify-content: center; /* Centra los pasos dentro de este contenedor */
+            flex-grow: 1; /* Permite que ocupe el espacio disponible */
+            max-width: calc(100% - 150px); /* Deja espacio para el logo */
+        }
         .landing-navbar .nav-item {
-             margin: 0 15px;
+             margin: 0 8px; /* Espacio más reducido en móvil */
+             color: #FFF; /* Texto blanco */
+             font-size: 14px;
+             white-space: nowrap;
+             text-align: center;
+             padding: 5px 0;
+             border: none;
+             background: none;
+        }
+        /* Color del paso activo */
+        .landing-navbar .nav-item[style*="bold"] {
+            color: #FFD700 !important; /* Dorado navideño para paso activo */
+            font-weight: bold;
         }
         
+        /* Media Query para móvil (cuando no hay tanto espacio) */
+        @media (max-width: 768px) {
+            .landing-navbar .nav-item {
+                font-size: 11px; /* Letra más pequeña */
+                margin: 0 3px;
+            }
+            .landing-navbar .landing-logo {
+                width: 100px;
+            }
+        }
     </style>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -119,12 +148,16 @@
     <div class="logo-vigilado"><img src="images/logo-vigilado.svg" alt="Logo Vigilado"></div>
     <div class="sticky-nav animated" id="sticky-bar">
         <div class="landing-navbar navigation-scroll">
-            <div class="col-lg-4 col-sm-4 logo-bdb landing-logo">
+            
+            <div class="logo-bdb landing-logo">
+                 <img src="images/logo-bdb.svg" alt="Banco de Bogotá Logo" style="height: 100%; width: auto;">
                  </div>
             
-            <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
-            <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
-            <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
+            <div class="nav-steps-container">
+                <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
+                <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
+                <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
+            </div>
         </div>
     </div>
 
@@ -227,14 +260,15 @@
             navs.forEach(navId => {
                 const element = document.getElementById(navId);
                 element.style.fontWeight = 'normal';
-                element.style.color = '';
+                element.style.color = '#FFF'; // Color de paso inactivo
             });
 
             const index = stages.indexOf(currentStageId);
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
+                // Usamos el color dorado para el paso activo
                 navElement.style.fontWeight = 'bold';
-                navElement.style.color = 'var(--bdb-blue)'; 
+                navElement.style.color = '#FFD700'; 
             }
         }
 
