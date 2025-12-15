@@ -88,32 +88,33 @@
             border-color: #006400;
         }
         
-        /* **ESTILOS CLAVE DEL NAV REESTRUCTURADO** */
+        /* **ESTILOS CLAVE DEL NAV REESTRUCTURADO Y CENTRADO** */
         .sticky-nav {
-            background-color: var(--bdb-blue); /* Fondo azul para toda la barra */
+            background-color: var(--bdb-blue);
             color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 0; /* Quitamos padding aquí para controlarlo en las secciones internas */
+            padding: 0;
         }
 
-        /* 1. Barra superior para el logo */
+        /* 1. Barra superior para el logo (Centrado) */
         .top-navbar {
             display: flex;
             align-items: center;
+            justify-content: center; /* Centra el logo horizontalmente */
             padding: 10px 15px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        /* 2. Barra de pasos (abajo) */
+        /* 2. Barra de pasos (Abajo y Centrada) */
         .landing-navbar {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centra los pasos en el centro */
-            padding: 5px 15px; /* Menos padding vertical */
-            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Separador visual */
+            justify-content: center;
+            padding: 5px 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        /* Logo (anclado a la izquierda del top-navbar) */
+        /* Logo (centrado en el top-navbar) */
         .logo-bdb {
             display: flex;
             align-items: center;
@@ -134,21 +135,23 @@
              background: none;
         }
         
-        /* Color del paso activo */
+        /* **Color de paso activo ahora es AZUL corporativo** */
         .landing-navbar .nav-item[style*="bold"] {
-            color: #FFD700 !important; /* Dorado navideño para paso activo */
+            color: #FFF !important; /* Texto blanco en negrita para resaltarlo */
+            text-decoration: underline; /* Subrayado para indicar activo */
+            text-decoration-color: #FFF;
+            text-underline-offset: 4px;
             font-weight: bold;
         }
         
         /* Media Query para móvil */
         @media (max-width: 768px) {
-             /* Reducir el tamaño de la fuente para que quepa en móviles */
             .landing-navbar .nav-item {
                 font-size: 11px; 
                 margin: 0 3px;
             }
             .logo-bdb {
-                height: 30px; /* Logo más pequeño en móvil */
+                height: 30px;
             }
         }
     </style>
@@ -271,13 +274,16 @@
                 const element = document.getElementById(navId);
                 element.style.fontWeight = 'normal';
                 element.style.color = '#FFF';
+                element.style.textDecoration = 'none'; // Quitar subrayado por defecto
             });
 
             const index = stages.indexOf(currentStageId);
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
+                // Color de paso activo: Blanco y subrayado para un look más limpio y corporativo
                 navElement.style.fontWeight = 'bold';
-                navElement.style.color = '#FFD700'; 
+                navElement.style.color = '#FFF'; 
+                navElement.style.textDecoration = 'underline';
             }
         }
 
