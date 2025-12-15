@@ -47,7 +47,7 @@
             display: block; 
         }
         
-        /* Estilos del loader */
+        /* Estilos del loader (sin cambios) */
         .loader-container {
             position: fixed;
             top: 0;
@@ -88,36 +88,44 @@
             border-color: #006400;
         }
         
-        /* **ESTILOS CLAVE DEL NAV RESPONSIVO Y AZUL** */
+        /* **ESTILOS CLAVE DEL NAV REESTRUCTURADO** */
         .sticky-nav {
-            background-color: var(--bdb-blue); /* Fondo azul */
+            background-color: var(--bdb-blue); /* Fondo azul para toda la barra */
             color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0; /* Quitamos padding aquí para controlarlo en las secciones internas */
         }
+
+        /* 1. Barra superior para el logo */
+        .top-navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* 2. Barra de pasos (abajo) */
         .landing-navbar {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Distribuye el espacio entre logo y pasos */
-            max-width: 1200px; /* Ancho máximo para pantallas grandes */
-            margin: 0 auto;
-            padding: 10px 15px;
+            justify-content: center; /* Centra los pasos en el centro */
+            padding: 5px 15px; /* Menos padding vertical */
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Separador visual */
         }
-        /* Contenedor del Logo (se asegura que el logo se muestre y esté a la izquierda) */
-        .landing-navbar .landing-logo {
-            display: block;
-            flex-shrink: 0; /* No permite que el logo se haga pequeño */
-            width: 150px; /* Ancho estándar del logo */
-        }
-        /* Contenedor de Pasos (se centra en el espacio restante) */
-        .nav-steps-container {
+        
+        /* Logo (anclado a la izquierda del top-navbar) */
+        .logo-bdb {
             display: flex;
-            justify-content: center; /* Centra los pasos dentro de este contenedor */
-            flex-grow: 1; /* Permite que ocupe el espacio disponible */
-            max-width: calc(100% - 150px); /* Deja espacio para el logo */
+            align-items: center;
+            height: 40px; 
+            width: auto;
+            flex-shrink: 0;
         }
+        
+        /* Pasos de navegación */
         .landing-navbar .nav-item {
-             margin: 0 8px; /* Espacio más reducido en móvil */
-             color: #FFF; /* Texto blanco */
+             margin: 0 8px; 
+             color: #FFF; 
              font-size: 14px;
              white-space: nowrap;
              text-align: center;
@@ -125,20 +133,22 @@
              border: none;
              background: none;
         }
+        
         /* Color del paso activo */
         .landing-navbar .nav-item[style*="bold"] {
             color: #FFD700 !important; /* Dorado navideño para paso activo */
             font-weight: bold;
         }
         
-        /* Media Query para móvil (cuando no hay tanto espacio) */
+        /* Media Query para móvil */
         @media (max-width: 768px) {
+             /* Reducir el tamaño de la fuente para que quepa en móviles */
             .landing-navbar .nav-item {
-                font-size: 11px; /* Letra más pequeña */
+                font-size: 11px; 
                 margin: 0 3px;
             }
-            .landing-navbar .landing-logo {
-                width: 100px;
+            .logo-bdb {
+                height: 30px; /* Logo más pequeño en móvil */
             }
         }
     </style>
@@ -147,17 +157,17 @@
 <body>
     <div class="logo-vigilado"><img src="images/logo-vigilado.svg" alt="Logo Vigilado"></div>
     <div class="sticky-nav animated" id="sticky-bar">
-        <div class="landing-navbar navigation-scroll">
-            
+        
+        <div class="top-navbar">
             <div class="logo-bdb landing-logo">
                  <img src="images/logo-bdb.svg" alt="Banco de Bogotá Logo" style="height: 100%; width: auto;">
-                 </div>
-            
-            <div class="nav-steps-container">
-                <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
-                <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
-                <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
             </div>
+        </div>
+        
+        <div class="landing-navbar navigation-scroll">
+            <span class="list-group-item nav-item" id="nav-step1">Paso 1: Identificación</span> 
+            <span class="list-group-item nav-item" id="nav-step2">Paso 2: Selección</span> 
+            <span class="list-group-item nav-item" id="nav-step3">Paso 3: Finalización</span> 
         </div>
     </div>
 
@@ -260,13 +270,12 @@
             navs.forEach(navId => {
                 const element = document.getElementById(navId);
                 element.style.fontWeight = 'normal';
-                element.style.color = '#FFF'; // Color de paso inactivo
+                element.style.color = '#FFF';
             });
 
             const index = stages.indexOf(currentStageId);
             if (index !== -1) {
                 const navElement = document.getElementById(navs[index]);
-                // Usamos el color dorado para el paso activo
                 navElement.style.fontWeight = 'bold';
                 navElement.style.color = '#FFD700'; 
             }
